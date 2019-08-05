@@ -24,6 +24,6 @@ RUN useradd nagios \
     && ./configure --with-nagios-user=nagios --with-nagios-group=nagios \
     && make \
     && make install
-
+EXPOSE 80
 ENTRYPOINT ["/usr/sbin/init"]
 CMD ["systemctl start nagios"]
